@@ -1,7 +1,7 @@
 # Проект «Большое путешествие»
 
 * Студент: [Ольга Загирова](https://up.htmlacademy.ru/univer-js2/2/user/2197727).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Глазков](https://htmlacademy.ru/profile/id1194253/achievements).
 
 ---
 
