@@ -7,8 +7,8 @@ const getRandomInteger = (a = 0, b = 1) => {
 
 const getRandomElement = (elements) => {
   const MIN = 0;
-  const MAX = elements.length - 1;
-  return elements[getRandomInteger(MIN, MAX)];
+  const max = elements.length - 1;
+  return elements[getRandomInteger(MIN, max)];
 };
 
 const updateItem = (items, update) => {
@@ -25,4 +25,10 @@ const updateItem = (items, update) => {
   ];
 };
 
-export { getRandomInteger, updateItem, getRandomElement };
+const doCapitalizeString = (string) => {
+  const capFirstString = string[0].toUpperCase();
+  const restOfString = string.slice(1);
+  return capFirstString + restOfString;
+};
+
+export { getRandomInteger, updateItem, getRandomElement, doCapitalizeString };
