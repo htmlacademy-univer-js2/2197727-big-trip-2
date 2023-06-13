@@ -27,14 +27,16 @@ export default class PointNewPresenter {
     if (this.#creatingPointComponent !== null) {
       return;
     }
+
     this.#destinations = [...this.#destinationsModel.destinations];
     this.#offers = [...this.#offersModel.offers];
 
     this.#creatingPointComponent = new PointView({
-      destination: this.#destinations,
+      destinations: this.#destinations,
       offers: this.#offers,
       isNewPoint: true
     });
+    
     this.#creatingPointComponent.setFormSubmitHandler(this.#handleFormSubmit);
     this.#creatingPointComponent.setResetClickHandler(this.#handleResetClick);
 
