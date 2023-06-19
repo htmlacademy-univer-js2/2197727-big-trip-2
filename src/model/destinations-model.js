@@ -10,6 +10,14 @@ export default class DestinationsModel extends Observable {
     this.#destinationsApiService = destinationsApiService;
   }
 
+  get destinations() {
+    return this.#destinations;
+  }
+
+  get isSuccessfulLoading() {
+    return this.#isSuccessfulLoading;
+  }
+
   init = async () => {
     try {
       this.#destinations = await this.#destinationsApiService.destinations;
@@ -19,13 +27,5 @@ export default class DestinationsModel extends Observable {
       this.#isSuccessfulLoading = false;
     }
   };
-
-  get destinations() {
-    return this.#destinations;
-  }
-
-  get isSuccessfulLoading() {
-    return this.#isSuccessfulLoading;
-  }
 }
 

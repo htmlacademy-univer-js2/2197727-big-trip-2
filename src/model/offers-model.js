@@ -9,6 +9,14 @@ export default class OffersModel extends Observable{
     super();
     this.#offersApiService = offersApiService;
   }
+  
+  get offers() {
+    return this.#offers;
+  }
+
+  get isSuccessfulLoading() {
+    return this.#isSuccessfulLoading;
+  }
 
   init = async () => {
     try {
@@ -19,12 +27,4 @@ export default class OffersModel extends Observable{
       this.#isSuccessfulLoading = false;
     }
   };
-
-  get offers() {
-    return this.#offers;
-  }
-
-  get isSuccessfulLoading() {
-    return this.#isSuccessfulLoading;
-  }
 }
